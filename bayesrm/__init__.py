@@ -1,4 +1,4 @@
-from .models.all_models import (
+from .all_models import (
     MonotonicStrictBinary,
     MonotonicMajorityBinary,
     MonotonicBayesIndividualMajority,
