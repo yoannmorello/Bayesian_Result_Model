@@ -313,11 +313,10 @@ BayesIndividualStrictmajority = BayesIndividualStrictMajority  # casing alias
 LogOddsPriorChainMC1 = LogOddsNoClipPriorChainMC1              # shorter alias
 
 __all__ = [
-    "StrictBinary",
-    "StrictMajority",
-    "BayesIndividualStrictMajority",
-    "LogOddsNoClipPriorChainMC1",
-    "BayesIndividualStrictmajority",
-    "LogOddsPriorChainMC1",
+    "MonotonicStrictBinary",
+    "MonotonicMajorityBinary",
+    "MonotonicBayesIndividualMajority",
+    "MonotonicBayesIndividualLogOddsNoClipPriorChainMC1",
 ]
+
 
