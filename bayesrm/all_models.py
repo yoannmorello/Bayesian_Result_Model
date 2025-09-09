@@ -49,7 +49,7 @@ class MonotonicModel(ABC):
 # ================================================================
 # 1) Strict Binary
 # ================================================================
-class StrictBinary(MonotonicModel):
+class MonotonicStrictBinary(MonotonicModel):
     """
     Decide only if exactly one side has any precedent:
       π if cnt_le_pi>0 and cnt_ge_delta=0
@@ -67,7 +67,7 @@ class StrictBinary(MonotonicModel):
 # ================================================================
 # 2) Strict Majority
 # ================================================================
-class StrictMajority(MonotonicModel):
+class MonotonicStrictMajority(MonotonicModel):
     """
     Decide by strict count majority among precedents; abstain on ties/no evidence.
     """
@@ -103,7 +103,7 @@ def _build_individual_betas_plus1(train_db: Dict[str, dict]) -> dict[str, tuple[
     return indiv
 
 
-class BayesIndividualStrictMajority(MonotonicModel):
+class MonotonicBayesIndividualMajority(MonotonicModel):
     """
     Unweighted per-precedent model with +1 smoothing.
     Predict by MC majority of 0/1 votes sampled from each influencing Beta.
@@ -246,7 +246,7 @@ def _logit_array(x, eps=1e-12):
     return np.log(x) - np.log1p(-x)
 
 
-class LogOddsNoClipPriorChainMC1(MonotonicModel):
+class MonotonicBayesIndividualLogOddsNoClipPriorChainMC1(MonotonicModel):
     """
     Chain-pruned, unweighted, prior-corrected log-odds model with MC1 confidence.
 
