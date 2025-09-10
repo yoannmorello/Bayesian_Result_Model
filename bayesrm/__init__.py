@@ -1,13 +1,13 @@
 from .all_models import (
     MonotonicStrictBinary,
-    MonotonicStrictMajority,
+    MonotonicMajorityBinary,
     MonotonicBayesIndividualMajority,
     MonotonicBayesIndividualLogOddsNoClipPriorChainMC1,
 )
 
 __all__ = [
     "MonotonicStrictBinary",
-    "MonotonicStrictMajority",
+    "MonotonicMajorityBinary",
     "MonotonicBayesIndividualMajority",
     "MonotonicBayesIndividualLogOddsNoClipPriorChainMC1",
 ]

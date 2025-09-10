@@ -64,9 +64,9 @@ class MonotonicStrictBinary(MonotonicModel):
 
 
 # ================================================================
-# 2) Strict Majority
+# 2) Majority Binary (renamed to match desired API)
 # ================================================================
-class MonotonicStrictMajority(MonotonicModel):
+class MonotonicMajorityBinary(MonotonicModel):
     """
     Decide by strict count majority among precedents; abstain on ties/no evidence.
     """
@@ -307,11 +307,13 @@ class MonotonicBayesIndividualLogOddsNoClipPriorChainMC1(MonotonicModel):
         return np.nan, np.nan
 
 
-
+# ---------------------------------------------------------------
+# Backward-compat alias for older code (optional; not exported)
+MonotonicStrictMajority = MonotonicMajorityBinary
 
 __all__ = [
     "MonotonicStrictBinary",
-    "MonotonicStrictMajority",
+    "MonotonicMajorityBinary",
     "MonotonicBayesIndividualMajority",
     "MonotonicBayesIndividualLogOddsNoClipPriorChainMC1",
 ]
