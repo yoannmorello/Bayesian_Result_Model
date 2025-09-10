@@ -309,12 +309,12 @@ class MonotonicBayesIndividualLogOddsNoClipPriorChainMC1(MonotonicModel):
 
 
 # ---------------------------------------------------------------
-BayesIndividualStrictmajority = BayesIndividualStrictMajority  # casing alias
-LogOddsPriorChainMC1 = LogOddsNoClipPriorChainMC1              # shorter alias
+BayesIndividualStrictmajority = MonotonicBayesIndividualMajority
+LogOddsPriorChainMC1 = MonotonicBayesIndividualLogOddsNoClipPriorChainMC1
 
 __all__ = [
     "MonotonicStrictBinary",
-    "MonotonicMajorityBinary",
+    "MonotonicStrictMajority",
     "MonotonicBayesIndividualMajority",
     "MonotonicBayesIndividualLogOddsNoClipPriorChainMC1",
 ]
