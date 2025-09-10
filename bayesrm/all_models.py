@@ -1,4 +1,3 @@
-
 from __future__ import annotations
 from abc import ABC, abstractmethod
 from typing import Dict, Tuple, Union, List
@@ -308,9 +307,7 @@ class MonotonicBayesIndividualLogOddsNoClipPriorChainMC1(MonotonicModel):
         return np.nan, np.nan
 
 
-# ---------------------------------------------------------------
-BayesIndividualStrictmajority = MonotonicBayesIndividualMajority
-LogOddsPriorChainMC1 = MonotonicBayesIndividualLogOddsNoClipPriorChainMC1
+
 
 __all__ = [
     "MonotonicStrictBinary",
@@ -318,5 +315,3 @@ __all__ = [
     "MonotonicBayesIndividualMajority",
     "MonotonicBayesIndividualLogOddsNoClipPriorChainMC1",
 ]
-
-
